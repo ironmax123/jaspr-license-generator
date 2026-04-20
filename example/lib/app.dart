@@ -1,17 +1,53 @@
-import 'package:flutter/material.dart';
-import 'package:license_generator_example/screen/home_screen.dart';
+import 'package:jaspr/dom.dart';
+import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+import 'components/header.dart';
+import 'pages/about.dart';
+import 'pages/home.dart';
+
+// The main component of your application.
+//
+// By using multi-page routing, this component will only be built on the server during pre-rendering and
+// **not** executed on the client. Instead only the nested [Home] and [About] components will be mounted on the client.
+class App extends StatelessComponent {
+  const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'icapps license',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeScreen(),
-    );
+  Component build(BuildContext context) {
+    // This method is rerun every time the component is rebuilt.
+    
+    // Renders a <div class="main"> html element with children.
+    return div(classes: 'main', [
+      const Header(),
+      Router(routes: [
+        Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
+        Route(path: '/about', title: 'About', builder: (context, state) => const About()),
+      ]),
+    ]);
   }
+
+  // Defines the CSS styles for this component.
+  //
+  // By using the @css annotation, these will be rendered automatically to CSS and included in your page.
+  // Must be a variable or getter of type [List<StyleRule>].
+  @css
+  static List<StyleRule> get styles => [
+    css('.main', [
+      // The '&' refers to the parent selector of a nested style rules.
+      css('&').styles(
+        display: .flex,
+        height: 100.vh,
+        flexDirection: .column,
+        flexWrap: .wrap,
+      ),
+      css('section').styles(
+        display: .flex,
+        flexDirection: .column,
+        justifyContent: .center,
+        alignItems: .center,
+        flex: Flex(grow: 1),
+      ),
+    ]),
+  ];
 }

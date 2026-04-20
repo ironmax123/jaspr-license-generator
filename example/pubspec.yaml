@@ -1,42 +1,19 @@
-name: license_generator_example
-description: A project used to demo the Todo Reporter
-version: 1.0.0+1
-publish_to: 'none'
+name: example
+description: A new Jaspr project
+version: 0.0.1
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ^3.10.0
 
 dependencies:
-  fast_barcode_scanner: ^1.1.4
-  flutter:
-    sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  provider: ^6.0.5
-  shared_preferences: ^2.1.1
+  jaspr: ^0.23.0
+  jaspr_router: ^0.8.2
 
 dev_dependencies:
-  flutter_lints: ^2.0.1
-  license_generator:
-    path: ../
+  build_runner: ^2.10.0
+  build_web_compilers: ^4.4.17
+  jaspr_builder: ^0.23.0
+  lints: ^5.0.0
 
-flutter:
-  assets:
-    - assets/locale/
-
-license_generator:
-  #  fail_fast: true
-  check_before_generate: true
-  licenses:
-  #    license_generator: https://raw.githubusercontent.com/icapps/flutter-icapps-license/master/LICENSE
-  ignore_licenses:
-    - shared_preferences
-  extra_licenses:
-    something_something:
-      name: Something Something
-      version: 2.0.0
-      homepage: https://www.google.com
-      license: test_license
-    license_generator:
-      name: license_generator
-      license: https://raw.githubusercontent.com/icapps/flutter-icapps-license/master/LICENSE
+jaspr:
+  mode: static
