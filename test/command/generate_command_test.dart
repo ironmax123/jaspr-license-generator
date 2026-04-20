@@ -46,7 +46,7 @@ packages:
       final generateCommand = GenerateCommand(repo);
       await generateCommand.generateLicenses(params);
       final data = File(outputPath).readAsStringSync();
-      expect(data, """import 'package:flutter/widgets.dart';
+      expect(data, """import 'package:jaspr/jaspr.dart';
 
 //============================================================//
 //THIS FILE IS AUTO GENERATED. DO NOT EDIT//
@@ -127,7 +127,7 @@ packages:
       final generateCommand = GenerateCommand(repo);
       await generateCommand.generateLicenses(params);
       final data = File(outputPath).readAsStringSync();
-      expect(data, """import 'package:flutter/widgets.dart';
+      expect(data, """import 'package:jaspr/jaspr.dart';
 
 //============================================================//
 //THIS FILE IS AUTO GENERATED. DO NOT EDIT//
@@ -195,7 +195,7 @@ packages:
       final generateCommand = GenerateCommand(repo);
       await generateCommand.generateLicenses(params);
       final data = File(outputPath).readAsStringSync();
-      expect(data, """import 'package:flutter/widgets.dart';
+      expect(data, """import 'package:jaspr/jaspr.dart';
 
 //============================================================//
 //THIS FILE IS AUTO GENERATED. DO NOT EDIT//
@@ -272,7 +272,7 @@ packages:
       final generateCommand = GenerateCommand(repo);
       await generateCommand.generateLicenses(params);
       final data = File(outputPath).readAsStringSync();
-      expect(data, """import 'package:flutter/widgets.dart';
+      expect(data, """import 'package:jaspr/jaspr.dart';
 
 //============================================================//
 //THIS FILE IS AUTO GENERATED. DO NOT EDIT//

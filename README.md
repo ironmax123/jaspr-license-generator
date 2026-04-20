@@ -1,114 +1,91 @@
-# flutter jaspr_license_generator
+# jaspr_license_generator
 
-A dart package to download the licenses for al the packages used.
+A Dart tool to generate a file that contains all licenses of the third-party libraries used in your project.
 
-[![pub package](https://img.shields.io/pub/v/jaspr_license_generator.svg)](https://pub.dartlang.org/packages/jaspr_license_generator)
-[![Build Status](https://app.travis-ci.com/icapps/flutter-icapps-license.svg?branch=master)](https://app.travis-ci.com/icapps/flutter-icapps-license)
-[![Coverage Status](https://coveralls.io/repos/github/icapps/flutter-icapps-license/badge.svg)](https://coveralls.io/github/icapps/flutter-icapps-license)
+> **This is a fork of [flutter-icapps-license](https://github.com/icapps/flutter-icapps-license) by icapps, adapted for use with [Jaspr](https://jaspr.site/) web framework.**
+
+---
 
 ## Setup
 
-### Add dependency to pubspec
+### Add dependency to pubspec.yaml
 
-[![pub package](https://img.shields.io/pub/v/jaspr_license_generator.svg)](https://pub.dartlang.org/packages/jaspr_license_generator)
-```
-dev-dependencies:
+```yaml
+dev_dependencies:
   jaspr_license_generator: <latest-version>
 ```
 
+---
+
+## Configuration
+
+Add the following to your `pubspec.yaml`:
+
 ### Basic options
+
 ```yaml
 jaspr_license_generator:
-  fail_fast: true/false    #(optional) Errors are not ignored and the generator will fail with an error
+  fail_fast: true # (optional) Errors are not ignored and the generator will fail on error
 ```
 
 ### All options
+
 ```yaml
 jaspr_license_generator:
-  fail_fast: boolean #(optional) if true the `check` command will fail at the first version missmatch. If false you will receive a list at the end of the command. -> Default: false
-  check_before_generate: boolean #(optional) If true the `generate` command will check if your pubspec.yaml & pubspec.lock are in sync before generating the code -> Default: false
-  output_path: String #(optional) Override the default output path to generate the license file somewhere else -> Default: lib/util/license.dart
-  download_pub_dev_details: bool #(optional) If ture the `generate` command will download the pubdev details (homepage/repository) -> Default: false
-  pub_dev_base_url: String #(optional) This will override the default pubdev base url for downloading the pubdev details (homepage/repository) -> Default: https://pub.dev
-  licenses: #(optional) This will accept key value pairs (String/String) -> (package name/raw license url)
-    #jaspr_license_generator: https://raw.githubusercontent.com/icapps/flutter-icapps-license/master/LICENSE (example)
-  ignore_licenses: #(optional) This wil accept a list of package names (String)
+  fail_fast: boolean          # (optional) If true, fails at first error. Default: false
+  check_before_generate: boolean # (optional) Checks pubspec.yaml & pubspec.lock sync before generating. Default: false
+  output_path: String         # (optional) Override default output path. Default: lib/util/license.dart
+  download_pub_dev_details: bool # (optional) Downloads homepage/repository from pub.dev. Default: false
+  pub_dev_base_url: String    # (optional) Override pub.dev base URL. Default: https://pub.dev
+  licenses:                   # (optional) Key-value pairs of package name / raw license URL
+    # example:
+    # some_package: https://raw.githubusercontent.com/owner/repo/master/LICENSE
+  ignore_licenses:            # (optional) List of package names to ignore
     - shared_preferences
-  extra_licenses: #(optional) this will allow you to add extra licenses that are not added in your pubspec.yaml
-    something_something: #the name of your package will be used if `name` is not specified
-      name: String #(optional) This will override your package name
-      version: String #(optional) The version of this specific package/license
-      homepage: String #(optional) The url of the homepage of this package
-      repository: String #(optional) The url where the repository is located
-      license: String #(required) This can be an http/https url or a path to a specific file. The content of that url/path will be used to generate code.
-      dev_dependency: boolean #(optional) This is used internally
-      part_of_flutter_sdk: boolean #(optional) This will use the flutter license instead of the license specified in this map
+  extra_licenses:             # (optional) Add licenses not in pubspec.yaml
+    some_package:
+      name: String            # (optional) Override package name
+      version: String         # (optional) Package version
+      homepage: String        # (optional) Homepage URL
+      repository: String      # (optional) Repository URL
+      license: String         # (required) http/https URL or file path to license content
+      dev_dependency: boolean # (optional) Internal use
+      part_of_flutter_sdk: boolean # (optional) Uses the Flutter SDK license if true
 ```
 
-### Run package with Flutter
+---
 
-```bash
-flutter packages pub run jaspr_license_generator
-```
+## Usage
 
-### Run package with Dart
-
-### Check if all versions in your pubspec.yaml match your pubspec.lock
-
-```bash
-pub run jaspr_license_generator check
-```
-
-#### Generate the license file
+### Generate the license file
 
 ```bash
 dart pub run jaspr_license_generator generate
 ```
 
-### Logs
+### Check if pubspec.yaml and pubspec.lock are in sync
 
-Info is the default and is not required to pass.
 ```bash
-dart pub run jaspr_license_generator generate
-
-is the same as
-
-dart pub run jaspr_license_generator generate info
+dart pub run jaspr_license_generator check
 ```
 
-Debug will log more info te find out why the jaspr_license_generator is failing. Stacktraces & errors will be shown. Info logs will also be shown.
+### Log levels
+
 ```bash
+# Default (info)
+dart pub run jaspr_license_generator generate
+
+# Debug — shows stack traces and errors
 dart pub run jaspr_license_generator generate debug
-```
 
-Verbose will log everything. Downloading files & their status. Debug & info will also be shown.
-```bash
+# Verbose — logs everything including file downloads
 dart pub run jaspr_license_generator generate verbose
 ```
 
-### Working on mac?
+---
 
-add this to you .bash_profile
+## License
 
-```bash
-flutterlicensecheck(){
- flutter packages get && flutter packages pub run jaspr_license_generator check
-}
-```
+This project is a fork of [flutter-icapps-license](https://github.com/icapps/flutter-icapps-license) by [icapps](https://github.com/icapps), licensed under the MIT License.
 
-```bash
-flutterlicense(){
- flutter packages get && flutter packages pub run jaspr_license_generator generate
-}
-```
-
-now you can use the license_generate with a single command.
-
-```bash
-flutterlicense
-```
-
-And to check if everything is up to date use:
-```bash
-flutterlicensecheck
-```
+See [LICENSE](./LICENSE) for details.

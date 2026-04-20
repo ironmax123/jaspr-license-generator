@@ -7,4 +7,5 @@ environment:
 dependencies:
   meta: ^1.8.0
 dev_dependencies:
-  jaspr_license_generator: ^1.0.0
+  jaspr_license_generator:
+    path: .

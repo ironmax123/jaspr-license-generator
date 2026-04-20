@@ -1,7 +1,8 @@
 name: jaspr_license_generator
 description: Dart tool to generate a file that contains all licenses of the third party libraries
-version: 2.1.0
-homepage: https://github.com/icapps/flutter-icapps-license
+version: 1.0.0
+homepage: https://github.com/ironmax123/jaspr-license-generator
+repository: https://github.com/ironmax123/jaspr-license-generator
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
