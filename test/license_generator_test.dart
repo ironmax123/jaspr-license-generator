@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:path/path.dart';
 import 'package:test/test.dart';
-import '../bin/src/license_generator.dart';
+import '../bin/src/jaspr_license_generator.dart';
 import '../bin/src/model/exception/fatal_exception.dart';
-import '../bin/license_generator.dart' as entry_point;
+import '../bin/jaspr_license_generator.dart' as entry_point;
 
 void main() {
   final pubspecPath =
-      join(Directory.current.path, 'test', 'license_generator_pubspec.yaml');
+      join(Directory.current.path, 'test', 'jaspr_license_generator_pubspec.yaml');
   final pubspecLockPath =
-      join(Directory.current.path, 'test', 'license_generator_pubspec.lock');
+      join(Directory.current.path, 'test', 'jaspr_license_generator_pubspec.lock');
   group('Test License Generator', () {
     test('Test main', () {
       entry_point.main([]);
@@ -21,7 +21,7 @@ void main() {
         throwsA(predicate((e) =>
             e is FatalException &&
             e.message ==
-                'license_generator should be started with `check` or `generate`')),
+                'jaspr_license_generator should be started with `check` or `generate`')),
       );
     });
     test('Test license generator with check', () async {
@@ -32,7 +32,7 @@ void main() {
         throwsA(predicate((e) =>
             e is FatalException &&
             e.message ==
-                'license_generator should be added to the dev_dependencies.')), //because the pubspec.yaml of the root is used
+                'jaspr_license_generator should be added to the dev_dependencies.')), //because the pubspec.yaml of the root is used
       );
     });
     test('Test license generator with check', () async {
@@ -106,7 +106,7 @@ void main() {
     });
     group('Output files', () {
       final outputPath =
-          join(Directory.current.path, 'test', 'license_generator_output.txt');
+          join(Directory.current.path, 'test', 'jaspr_license_generator_output.txt');
       tearDown(() {
         File(outputPath).deleteSync();
       });

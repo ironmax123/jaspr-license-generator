@@ -25,11 +25,11 @@ void main() {
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -39,8 +39,8 @@ packages:
 ''';
       final params = Params(yaml, lock);
       final repo = TestLicenseRepository({
-        'license_generator': const DependencyLicenseData(
-            license: 'this is the license_generator license'),
+        'jaspr_license_generator': const DependencyLicenseData(
+            license: 'this is the jaspr_license_generator license'),
       });
       params.fileOutputPath = outputPath;
       final generateCommand = GenerateCommand(repo);
@@ -75,8 +75,8 @@ class LicenseUtil {
   static List<License> getLicenses() {
     return [
       const License(
-        name: r'license_generator',
-        license: r'''this is the license_generator license''',
+        name: r'jaspr_license_generator',
+        license: r'''this is the jaspr_license_generator license''',
         version: r'1.0.0',
         homepage: null,
         repository: null,
@@ -93,15 +93,15 @@ name: test_example
 dependencies:
   shared_preferences: ^2.1.1
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 
-license_generator:
+jaspr_license_generator:
   ignore_licenses:
     - shared_preferences
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -118,8 +118,8 @@ packages:
 ''';
       final params = Params(yaml, lock);
       final repo = TestLicenseRepository({
-        'license_generator': const DependencyLicenseData(
-            license: 'this is the license_generator license'),
+        'jaspr_license_generator': const DependencyLicenseData(
+            license: 'this is the jaspr_license_generator license'),
         'shared_preferences': const DependencyLicenseData(
             license: 'this is the shared_preference license'),
       });
@@ -156,8 +156,8 @@ class LicenseUtil {
   static List<License> getLicenses() {
     return [
       const License(
-        name: r'license_generator',
-        license: r'''this is the license_generator license''',
+        name: r'jaspr_license_generator',
+        license: r'''this is the jaspr_license_generator license''',
         version: r'1.0.0',
         homepage: null,
         repository: null,
@@ -173,11 +173,11 @@ class LicenseUtil {
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -187,8 +187,8 @@ packages:
 ''';
       final params = Params(yaml, lock);
       final repo = TestLicenseRepository({
-        'license_generator': const DependencyLicenseData(
-            license: 'this is the license_generator license'),
+        'jaspr_license_generator': const DependencyLicenseData(
+            license: 'this is the jaspr_license_generator license'),
       });
       params.fileOutputPath = outputPath;
       params.checkBeforeGenerate = true;
@@ -224,8 +224,8 @@ class LicenseUtil {
   static List<License> getLicenses() {
     return [
       const License(
-        name: r'license_generator',
-        license: r'''this is the license_generator license''',
+        name: r'jaspr_license_generator',
+        license: r'''this is the jaspr_license_generator license''',
         version: r'1.0.0',
         homepage: null,
         repository: null,
@@ -241,18 +241,18 @@ class LicenseUtil {
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
-license_generator:
+  jaspr_license_generator: 1.0.0
+jaspr_license_generator:
   extra_licenses:
-    license_generator:
-      name: license_generator
+    jaspr_license_generator:
+      name: jaspr_license_generator
       license: https://test.com
       repository: https://repository.com
       homepage: https://homepage.com
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -262,8 +262,8 @@ packages:
 ''';
       final params = Params(yaml, lock);
       final repo = TestLicenseRepository({
-        'license_generator': const DependencyLicenseData(
-          license: 'this is the license_generator license',
+        'jaspr_license_generator': const DependencyLicenseData(
+          license: 'this is the jaspr_license_generator license',
           repositoryUrl: 'https://repository.com',
           homepageUrl: 'https://homepage.com',
         ),
@@ -301,8 +301,8 @@ class LicenseUtil {
   static List<License> getLicenses() {
     return [
       const License(
-        name: r'license_generator',
-        license: r'''this is the license_generator license''',
+        name: r'jaspr_license_generator',
+        license: r'''this is the jaspr_license_generator license''',
         version: null,
         homepage: r'https://homepage.com',
         repository: r'https://repository.com',

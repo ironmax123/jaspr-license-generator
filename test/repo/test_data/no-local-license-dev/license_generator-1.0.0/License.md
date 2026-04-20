@@ -1,1 +1,1 @@
-this is the license_generator license for 1.0.0 (no-local-license)
+this is the jaspr_license_generator license for 1.0.0 (no-local-license)

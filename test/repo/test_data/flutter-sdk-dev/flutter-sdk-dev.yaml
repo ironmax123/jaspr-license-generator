@@ -9,4 +9,4 @@ dependencies:
 dev_dependencies:
   test_package:
     sdk: flutter
-  license_generator: ^1.0.0
+  jaspr_license_generator: ^1.0.0

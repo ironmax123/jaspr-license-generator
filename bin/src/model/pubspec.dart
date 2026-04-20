@@ -14,7 +14,7 @@ const licensePath = '/master/LICENSE';
 const licensePathShort = '/LICENSE';
 
 class Params {
-  static const yamlConfigLicense = 'license_generator';
+  static const yamlConfigLicense = 'jaspr_license_generator';
   static const yamlConfigFailFast = 'fail_fast';
   static const yamlConfigOuputPath = 'output_path';
   static const yamlConfigCheckBeforeGenerate = 'check_before_generate';

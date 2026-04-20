@@ -8,7 +8,7 @@ void main() {
     test('test ../', () {
       const packageConfigJson = r'''
 {
-  "name": "license_generator",
+  "name": "jaspr_license_generator",
   "rootUri": "../",
   "packageUri": "lib/",
   "languageVersion": "2.12"
@@ -17,7 +17,7 @@ void main() {
 
       final json = jsonDecode(packageConfigJson) as Map<String, dynamic>;
       final package = CachedPackage.fromJson(json);
-      expect(package.name, 'license_generator');
+      expect(package.name, 'jaspr_license_generator');
       expect(package.rootUri, '');
       expect(package.packageUri, 'lib/');
     });

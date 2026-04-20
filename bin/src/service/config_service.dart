@@ -24,7 +24,7 @@ class ConfigService {
     final file = File(path);
     if (!file.existsSync()) {
       throw FatalException(
-          '$path does not exists. Make sure you run packages get before license_generator');
+          '$path does not exists. Make sure you run packages get before jaspr_license_generator');
     }
     final content = file.readAsStringSync();
     final json = jsonDecode(content) as Map<String, dynamic>;

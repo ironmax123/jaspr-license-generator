@@ -8,12 +8,23 @@ environment:
 dependencies:
   jaspr: ^0.23.0
   jaspr_router: ^0.8.2
+  freezed_annotation: ^3.0.0
+  json_annotation: ^4.8.1
+  jaspr_riverpod: ^0.4.1
 
 dev_dependencies:
   build_runner: ^2.10.0
   build_web_compilers: ^4.4.17
   jaspr_builder: ^0.23.0
   lints: ^5.0.0
+  freezed: ^3.2.3
+  json_serializable: ^6.7.1
+  riverpod_generator: ^4.0.3
+  jaspr_license_generator:
+    path: ../
+
+dependency_overrides:
+  analyzer: ^10.2.0
 
 jaspr:
   mode: static

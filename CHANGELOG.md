@@ -36,7 +36,7 @@
 ## [1.0.0] - 2022-01-05
 ### Initial release
 - This package is a full refactor of icapps_license
-- icapps_license was renamed to license_generator
+- icapps_license was renamed to jaspr_license_generator
 - removed nullsafe flag
 - local licenses are used based on `.dart_tool/package_config.json`
 

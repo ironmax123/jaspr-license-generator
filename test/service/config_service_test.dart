@@ -71,7 +71,7 @@ void main() {
         throwsA(predicate((e) =>
             e is FatalException &&
             e.message ==
-                '${Directory.current.path}/test/service/config_service_test_data/package_config.json-does-not-exits does not exists. Make sure you run packages get before license_generator')),
+                '${Directory.current.path}/test/service/config_service_test_data/package_config.json-does-not-exits does not exists. Make sure you run packages get before jaspr_license_generator')),
       );
     });
   });

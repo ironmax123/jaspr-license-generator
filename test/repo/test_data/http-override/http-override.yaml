@@ -8,7 +8,7 @@ environment:
 dependencies:
   test_package: ^1.0.0
 dev_dependencies:
-  license_generator: ^1.0.0
-license_generator:
+  jaspr_license_generator: ^1.0.0
+jaspr_license_generator:
   licenses:
     test_package: http://test.com

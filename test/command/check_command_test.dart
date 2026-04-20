@@ -12,11 +12,11 @@ void main() {
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -35,12 +35,12 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -63,11 +63,11 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -88,12 +88,12 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -126,12 +126,12 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -162,14 +162,14 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
-license_generator:
+jaspr_license_generator:
   fail_fast: true
 ''';
       const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."

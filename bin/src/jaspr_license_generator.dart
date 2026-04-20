@@ -29,7 +29,7 @@ class LicenseGenerator {
   }) {
     if (args.isEmpty) {
       const message =
-          'license_generator should be started with `check` or `generate`';
+          'jaspr_license_generator should be started with `check` or `generate`';
       Logger.logInfo(message);
       throw FatalException(message);
     }

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'src/license_generator.dart';
+import 'src/jaspr_license_generator.dart';
 import 'src/model/exception/fatal_exception.dart';
 import 'src/util/logger.dart';
 

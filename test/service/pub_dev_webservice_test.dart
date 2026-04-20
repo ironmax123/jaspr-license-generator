@@ -106,7 +106,7 @@ void main() {
       );
       final data = <String, dynamic>{};
       const gitData = r'''
-name: license_generator
+name: jaspr_license_generator
 version: 3.0.0
 homepage: https://homepage.com
 repository: https://repository.com
@@ -115,7 +115,7 @@ repository: https://repository.com
       final pubDevService = PubDevWebservice(webservice: webservice);
       final pubDevPackage =
           await pubDevService.getPubDevData(dependency, lockedDependency);
-      expect(pubDevPackage!.pubspec.name, 'license_generator');
+      expect(pubDevPackage!.pubspec.name, 'jaspr_license_generator');
       expect(pubDevPackage.pubspec.version, '3.0.0');
       expect(pubDevPackage.pubspec.homepage, 'https://homepage.com');
       expect(pubDevPackage.pubspec.repository, 'https://repository.com');
@@ -144,7 +144,7 @@ repository: https://repository.com
       );
       final data = <String, dynamic>{};
       const gitData = r'''
-name: license_generator
+name: jaspr_license_generator
 version: 3.0.0
 homepage: https://homepage.com
 repository: https://repository.com
@@ -153,7 +153,7 @@ repository: https://repository.com
       final pubDevService = PubDevWebservice(webservice: webservice);
       final pubDevPackage =
           await pubDevService.getPubDevData(dependency, lockedDependency);
-      expect(pubDevPackage!.pubspec.name, 'license_generator');
+      expect(pubDevPackage!.pubspec.name, 'jaspr_license_generator');
       expect(pubDevPackage.pubspec.version, '3.0.0');
       expect(pubDevPackage.pubspec.homepage, 'https://homepage.com');
       expect(pubDevPackage.pubspec.repository, 'https://repository.com');

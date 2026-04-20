@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const packageName = 'license_generator';
+const packageName = 'jaspr_license_generator';
 
 void main() {
   Logger.debug('====');

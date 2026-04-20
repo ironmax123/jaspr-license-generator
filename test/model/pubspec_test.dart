@@ -5,7 +5,7 @@ import '../../bin/src/model/exception/fatal_exception.dart';
 void main() {
   group('Test Params', () {
     group('default', () {
-      test('Test Params without license_generator', () {
+      test('Test Params without jaspr_license_generator', () {
         const yaml = r'''
 name: test_example
 dependencies:
@@ -19,7 +19,7 @@ packages:
           throwsA(predicate((e) =>
               e is FatalException &&
               e.message ==
-                  'license_generator should be added to the dev_dependencies.')),
+                  'jaspr_license_generator should be added to the dev_dependencies.')),
         );
       });
 
@@ -47,11 +47,11 @@ dependencies:
   test_package:
     path: ../
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -77,11 +77,11 @@ dependencies:
     - test
     - test
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -109,14 +109,14 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package:
     - test
     - test  
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -146,15 +146,15 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
-license_generator:
+jaspr_license_generator:
   licenses:
     test_package: test.md
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -181,14 +181,14 @@ name: test_example
 dependencies:
   test_package: 1.0.0
 dev_dependencies:
-  license_generator: 1.0.0
-license_generator:
+  jaspr_license_generator: 1.0.0
+jaspr_license_generator:
   licenses:
     test_package: test.md
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -215,8 +215,8 @@ name: test_example
 dependencies:
   test_package: 1.0.0
 dev_dependencies:
-  license_generator: 1.0.0
-license_generator:
+  jaspr_license_generator: 1.0.0
+jaspr_license_generator:
   licenses:
     test_package:
       - test
@@ -224,7 +224,7 @@ license_generator:
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -252,15 +252,15 @@ name: test_example
 dependencies:
   test_package: 1.0.0
 dev_dependencies:
-  license_generator: 1.0.0 
-license_generator:
+  jaspr_license_generator: 1.0.0 
+jaspr_license_generator:
   licenses:
     test_package:
       path: ../
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -288,16 +288,16 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
-license_generator:
+jaspr_license_generator:
   extra_licenses:
     test_package: 
       license: https://test.com
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -321,9 +321,9 @@ packages:
 name: test_example
 dependencies:
 dev_dependencies:
-  license_generator: 1.0.0
+  jaspr_license_generator: 1.0.0
   test_package: 1.0.0
-license_generator:
+jaspr_license_generator:
   extra_licenses:
     test_package: 
       name: Test Package
@@ -331,7 +331,7 @@ license_generator:
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -357,8 +357,8 @@ name: test_example
 dependencies:
   test_package: 1.0.0
 dev_dependencies:
-  license_generator: 1.0.0
-license_generator:
+  jaspr_license_generator: 1.0.0
+jaspr_license_generator:
   extra_licenses:
     test_package:
       - test1
@@ -367,7 +367,7 @@ license_generator:
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."
@@ -395,14 +395,14 @@ name: test_example
 dependencies:
   test_package: 1.0.0
 dev_dependencies:
-  license_generator: 1.0.0 
-license_generator:
+  jaspr_license_generator: 1.0.0 
+jaspr_license_generator:
   extra_licenses: 
     test_package: test
 ''';
         const lock = r'''
 packages:
-  license_generator:
+  jaspr_license_generator:
     dependency: "direct dev"
     description:
       path: ".."

@@ -311,7 +311,7 @@ void main() {
       "languageVersion": "2.12"
     },
     {
-      "name": "license_generator",
+      "name": "jaspr_license_generator",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"

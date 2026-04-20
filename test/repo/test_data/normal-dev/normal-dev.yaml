@@ -8,4 +8,4 @@ environment:
 dependencies:
 dev_dependencies:
   test_package: ^1.0.0
-  license_generator: ^1.0.0
+  jaspr_license_generator: ^1.0.0
