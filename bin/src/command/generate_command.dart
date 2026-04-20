@@ -31,7 +31,7 @@ class GenerateCommand {
     }
 
     final sb = StringBuffer()
-      ..writeln("import 'package:flutter/widgets.dart';")
+      ..writeln("import 'package:jaspr/jaspr.dart';")
       ..writeln()
       ..writeln(
           '//============================================================//')
