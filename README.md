@@ -62,28 +62,28 @@ pub run jaspr_license_generator check
 #### Generate the license file
 
 ```bash
-pub run jaspr_license_generator generate
+dart pub run jaspr_license_generator generate
 ```
 
 ### Logs
 
 Info is the default and is not required to pass.
 ```bash
-pub run jaspr_license_generator generate
+dart pub run jaspr_license_generator generate
 
 is the same as
 
-pub run jaspr_license_generator generate info
+dart pub run jaspr_license_generator generate info
 ```
 
 Debug will log more info te find out why the jaspr_license_generator is failing. Stacktraces & errors will be shown. Info logs will also be shown.
 ```bash
-pub run jaspr_license_generator generate debug
+dart pub run jaspr_license_generator generate debug
 ```
 
 Verbose will log everything. Downloading files & their status. Debug & info will also be shown.
 ```bash
-pub run jaspr_license_generator generate verbose
+dart pub run jaspr_license_generator generate verbose
 ```
 
 ### Working on mac?

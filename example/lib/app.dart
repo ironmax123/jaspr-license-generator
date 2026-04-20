@@ -1,5 +1,6 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'pages/home.dart';
 
@@ -16,10 +17,12 @@ class App extends StatelessComponent {
 
     // Renders a <div class="main"> html element with children.
     return div(classes: 'main', [
-      Router(
-        routes: [
-          Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
-        ],
+      ProviderScope(
+        child: Router(
+          routes: [
+            Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
+          ],
+        ),
       ),
     ]);
   }
